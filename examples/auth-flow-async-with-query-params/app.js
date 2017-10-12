@@ -1,6 +1,8 @@
-import React, { createClass } from 'react'
+import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, IndexRoute, browserHistory, Link, withRouter } from 'react-router'
+import createReactClass from 'create-react-class'
+
 
 import withExampleBasename from '../withExampleBasename'
 
@@ -13,7 +15,7 @@ function App(props) {
 }
 
 const Form = withRouter(
-  createClass({
+  createReactClass({
 
     getInitialState() {
       return {

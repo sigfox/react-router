@@ -1,6 +1,6 @@
 import expect, { spyOn } from 'expect'
 import React, { Component } from 'react'
-import { Simulate } from 'react-addons-test-utils'
+import { Simulate } from 'react-dom/test-utils'
 import { render } from 'react-dom'
 import execSteps from './execSteps'
 import createHistory from 'history/lib/createMemoryHistory'

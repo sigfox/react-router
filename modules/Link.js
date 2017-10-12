@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import warning from './routerWarning'
 import invariant from 'invariant'
 import { routerShape } from './PropTypes'
+import createReactClass from 'create-react-class'
+import PropTypes from 'prop-types'
 
-const { bool, object, string, func, oneOfType } = React.PropTypes
+const { bool, object, string, func, oneOfType } = PropTypes
 
 function isLeftClickEvent(event) {
   return event.button === 0
@@ -48,7 +51,7 @@ function createLocationDescriptor(to, { query, hash, state }) {
  *
  *   <Link ... query={{ show: true }} state={{ the: 'state' }} />
  */
-const Link = React.createClass({
+const Link = createReactClass({
 
   contextTypes: {
     router: routerShape
@@ -63,7 +66,9 @@ const Link = React.createClass({
     activeClassName: string,
     onlyActiveOnIndex: bool.isRequired,
     onClick: func,
-    target: string
+    target: string,
+    href: string,
+    style: object
   },
 
   getDefaultProps() {

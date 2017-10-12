@@ -9,6 +9,8 @@ import RouterContext from './RouterContext'
 import { createRoutes } from './RouteUtils'
 import { createRouterObject, createRoutingHistory } from './RouterUtils'
 import warning from './routerWarning'
+import createReactClass from 'create-react-class'
+import PropTypes from 'prop-types'
 
 function isDeprecatedHistory(history) {
   return !history || !history.__v2_compatible__
@@ -20,14 +22,14 @@ function isUnsupportedHistory(history) {
   return history && history.getCurrentLocation
 }
 
-const { func, object } = React.PropTypes
+const { func, object } = PropTypes
 
 /**
  * A <Router> is a high-level API for automatically setting up
  * a router that renders a <RouterContext> with all the props
  * it needs each time the URL changes.
  */
-const Router = React.createClass({
+const Router = createReactClass({
 
   propTypes: {
     history: object,

@@ -1,6 +1,6 @@
 import expect, { spyOn } from 'expect'
 import React, { Component } from 'react'
-import { Simulate } from 'react-addons-test-utils'
+import { Simulate } from 'react-dom/test-utils'
 import { render } from 'react-dom'
 import createHistory from '../createMemoryHistory'
 import execSteps from './execSteps'
@@ -437,8 +437,6 @@ describe('A <Link>', function () {
       const steps = [
         function () {
           click(node.querySelector('a'), { button: 0 })
-        },
-        function () {
           expect(node.innerHTML).toMatch(/Link/)
           expect(spy).toNotHaveBeenCalled()
         }

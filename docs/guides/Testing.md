@@ -31,8 +31,7 @@ In prior setups, react-tools was needed. This is no longer the case. You will ne
 Lastly, anywhere you have the following:
 
 ```js
-var React = require('react/addons')
-var TestUtils = React.addons.TestUtils
+var TestUtils = require('react-doms/test-utils')
 ```
 
 needs to be replaced with this:
@@ -40,7 +39,7 @@ needs to be replaced with this:
 ```js
 import React from 'react'
 import { render } from 'react-dom'
-import TestUtils from 'react-addons-test-utils'
+import TestUtils from 'react-dom/test-utils'
 ```
 
 Make sure you do an npm clean, install, etc. and make sure you add react-addons-test-utils and react-dom to your unmocked paths.
@@ -109,7 +108,7 @@ The test for that component:
 
 jest.unmock('../BasicPage')
 
-import TestUtils from 'react-addons-test-utils'
+import TestUtils from 'react-dom/test-utils'
 import ReactDOM from 'react-dom'
 import React from 'react'
 import BasicPage from '../BasicPage'

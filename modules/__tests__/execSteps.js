@@ -1,5 +1,6 @@
 function execSteps(steps, done) {
   let index = 0
+  steps.unshift(() => {})
 
   return function () {
     if (steps.length === 0) {
