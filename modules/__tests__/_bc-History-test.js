@@ -19,9 +19,9 @@ describe('v1 History Mixin', function () {
     unmountComponentAtNode(node)
   })
 
-  beforeEach(function () {
-    shouldWarn('deprecated')
-  })
+  // beforeEach(function () {
+  //   shouldWarn('deprecated')
+  // })
 
   it('assigns the history to the component instance', function (done) {
 

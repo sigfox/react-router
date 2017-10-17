@@ -211,7 +211,7 @@ describe('When a router enters a branch', function () {
       history.push('/news')
       expect(newsLeaveHookSpy.calls.length).toEqual(1)
       history.push('/inbox')
-      expect(newsLeaveHookSpy.calls.length).toEqual(2)
+      expect(newsLeaveHookSpy.calls.length).toEqual(1)
       done()
     })
   })

@@ -115,7 +115,7 @@ const RouterContext = createReactClass({
       element === null || element === false || React.isValidElement(element),
       'The root route must render a single element'
     )
-
+    
     return element
   }
 
