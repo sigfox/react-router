@@ -5,7 +5,6 @@ import History from '../History'
 import Router from '../Router'
 import Route from '../Route'
 import createHistory from 'history/lib/createMemoryHistory'
-import shouldWarn from './shouldWarn'
 import createReactClass from 'create-react-class'
 
 describe('v1 History Mixin', function () {
