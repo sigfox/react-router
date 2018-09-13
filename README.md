@@ -1,13 +1,16 @@
-# React Router [![Travis][build-badge]][build] [![npm package][npm-badge]][npm]
+# This is a fork of React Router v2.8.1, compatible with react 16
+
+    $ npm install @sigfox/react-router
+
+All credits go to the origial creators, we just patched it to support React 16.
+
+# React Router
 
 <img src="/logo/vertical@2x.png" height="150"/>
 
 React Router is a complete routing library for [React](https://facebook.github.io/react).
 
 React Router keeps your UI in sync with the URL. It has a simple API with powerful features like lazy code loading, dynamic route matching, and location transition handling built right in. Make the URL your first thought, not an after-thought.
-
-[![Codecov][codecov-badge]][codecov]
-[![Discord][discord-badge]][discord]
 
 ### Docs & Help
 
@@ -33,7 +36,7 @@ We support all browsers and environments where React runs.
 
 Using [npm](https://www.npmjs.com/):
 
-    $ npm install --save react-router
+    $ npm install --save @sigfox/react-router
 
 Then with a module bundler like [webpack](https://webpack.github.io/) that supports either CommonJS or ES2015 modules, use as you would anything else:
 
