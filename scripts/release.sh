@@ -42,4 +42,4 @@ git push origin latest -f
 
 node scripts/build.js
 
-npm publish --access=publish
+npm publish --access=public
