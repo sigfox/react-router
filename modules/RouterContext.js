@@ -1,5 +1,6 @@
 import invariant from 'invariant'
 import React from 'react'
+import ReactIs from 'react-is'
 
 import deprecateObjectProperties from './deprecateObjectProperties'
 import getRouteParams from './getRouteParams'
@@ -90,7 +91,8 @@ const RouterContext = createReactClass({
               props[prop] = element[prop]
         }
 
-        if (typeof components === 'object') {
+        const isValidElementType = ReactIs.isValidElementType(components)
+        if (!isValidElementType && typeof components === 'object') {
           const elements = {}
 
           for (const key in components) {
