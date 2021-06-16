@@ -4,7 +4,7 @@ import warning from './routerWarning'
 import createReactClass from 'create-react-class'
 
 const RoutingContext = createReactClass({
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     warning(false, '`RoutingContext` has been renamed to `RouterContext`. Please use `import { RouterContext } from \'react-router\'`. http://tiny.cc/router-routercontext')
   },
 

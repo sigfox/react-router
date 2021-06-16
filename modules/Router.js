@@ -74,7 +74,7 @@ const Router = createReactClass({
     }
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const { parseQueryString, stringifyQuery } = this.props
     warning(
       !(parseQueryString || stringifyQuery),
@@ -142,7 +142,7 @@ const Router = createReactClass({
   },
 
   /* istanbul ignore next: sanity check */
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     warning(
       nextProps.history === this.props.history,
       'You cannot change <Router history>; it will be ignored'
