@@ -1,6 +1,6 @@
 {
   "name": "@sigfox/react-router",
-  "version": "2.8.7",
+  "version": "2.9.0",
   "description": "A complete routing library for React",
   "files": [
     "*.md",
